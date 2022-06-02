@@ -50,18 +50,20 @@ DYJetsM50HT = [
 		DYJetsToLL_M50_HT1200to2500,
 		DYJetsToLL_M50_HT2500toInf,
 		]
-#DYJetsToLL_M5to50_HT70to100      = Sample.fromDirectory("DYJetsToLL_M5to50_HT70to100"     , "",         xSection=303.4) #LO without 1.23 k-factor
-#DYJetsToLL_M5to50_HT100to200     = Sample.fromDirectory("DYJetsToLL_M5to50_HT100to200"    , "",         xSection=224.2) #LO without 1.23 k-factor
-#DYJetsToLL_M5to50_HT200to400     = Sample.fromDirectory("DYJetsToLL_M5to50_HT200to400"    , "",         xSection=37.2) #LO without 1.23 k-factor
-#DYJetsToLL_M5to50_HT400to600     = Sample.fromDirectory("DYJetsToLL_M5to50_HT400to600"    , "",         xSection=3.581) #LO without 1.23 k-factor
-#DYJetsToLL_M5to50_HT600toInf     = Sample.fromDirectory("DYJetsToLL_M5to50_HT600toInf"    , "",         xSection=1.124) #LO without 1.23 k-factor
-#DYJetsM5to50HT = [
-#    DYJetsToLL_M5to50_HT70to100,
-#    DYJetsToLL_M5to50_HT100to200,
-#    DYJetsToLL_M5to50_HT200to400,
-#    DYJetsToLL_M5to50_HT400to600,
-#    DYJetsToLL_M5to50_HT600toInf,
-#]
+##DYJetsToLL_M4to50_HT70to100      = Sample.fromDirectory("DYJetsToLL_M4to50_HT70to100"     , "",         xSection=303.4) #LO without 1.23 k-factor
+DYJetsToLL_M4to50_HT100to200     = Sample.fromDirectory("DYJetsToLL_M4to50_HT100to200"    , "/eos/vbc/experiments/cms/store/user/prhussai/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_13TeV-madgraphMLM-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2_privateUL18nanov9/220524_122219/",         xSection=224.2) #LO without 1.23 k-factor
+DYJetsToLL_M4to50_HT100to200.normalization = 14442189.0 
+#DYJetsToLL_M4to50_HT200to400     = Sample.fromDirectory("DYJetsToLL_M4to50_HT200to400"    , "",         xSection=37.2) #LO without 1.23 k-factor
+#DYJetsToLL_M4to50_HT400to600     = Sample.fromDirectory("DYJetsToLL_M4to50_HT400to600"    , "",         xSection=3.581) #LO without 1.23 k-factor
+DYJetsToLL_M4to50_HT600toInf     = Sample.fromDirectory("DYJetsToLL_M4to50_HT600toInf"    , "/eos/vbc/experiments/cms/store/user/prhussai/DYJetsToLL_M-4to50_HT-600toInf_TuneCP5_13TeV-madgraphMLM-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2_privateUL18nanov9/220524_122242/",         xSection=1.124) #LO without 1.23 k-factor
+DYJetsToLL_M4to50_HT600toInf.normalization = 14597795.0 
+DYJetsM4to50HT = [
+##    DYJetsToLL_M4to50_HT70to100,
+    DYJetsToLL_M4to50_HT100to200,
+#    DYJetsToLL_M4to50_HT200to400,
+#    DYJetsToLL_M4to50_HT400to600,
+    DYJetsToLL_M4to50_HT600toInf,
+]
 
 # x-secs using runXSecAnalyzer
 DYJetsToNuNu_HT100to200       = Sample.fromDirectory("DYJetsToNuNu_HT100to200",	      "/eos/vbc/experiments/cms/store/user/prhussai/ZJetsToNuNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v1_privateUL18nanov9/211124_205750/",	       xSection=280.35*1.23)
@@ -90,7 +92,7 @@ DYJetsNuNuHT = [
 ]
 
 
-DY = DYJetsM50HT  + DYJetsNuNuHT  #+ DYJetsM5to50HT
+DY = DYJetsM50HT  + DYJetsNuNuHT  + DYJetsM4to50HT
 
 # ttbar
 TTLep_pow_CP5       = Sample.fromDirectory("TTLep_pow_CP5",            "/eos/vbc/experiments/cms/store/user/prhussai/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v1_privateUL18nanov9/211124_205341/",            xSection=831.762*((3*0.108)**2))
@@ -140,22 +142,30 @@ top = [
 ## di/multiboson
 WWTo2L2Nu           = Sample.fromDirectory("WWTo2L2Nu",        "/eos/vbc/experiments/cms/store/user/prhussai/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2_privateUL18nanov9/211124_210010/",   xSection=12.178)
 WWTo2L2Nu.normalization = 110795280.393 
-#WWToLNuQQ           = Sample.fromDirectory("WWToLNuQQ",        "/WWToLNuQQ_13TeV-powheg/",         xSection=49.997)
+WWTo1L1Nu2Q         = Sample.fromDirectory("WWTo1L1Nu2Q",        "/eos/vbc/experiments/cms/store/user/prhussai/WWTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2_privateUL18nanov9/220524_122006/",         xSection=49.997)
+WWTo1L1Nu2Q.normalization = 3928644883.74 
 WW                  = Sample.fromDirectory("WW",               "/eos/vbc/experiments/cms/store/user/prhussai/WW_TuneCP5_13TeV-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v1_privateUL18nanov9/220329_093526/",                  xSection=63.21 * 1.82)
 WW.normalization = 15679122.7146 
 ZZTo2L2Nu           = Sample.fromDirectory("ZZTo2L2Nu",        "/eos/vbc/experiments/cms/store/user/prhussai/ZZTo2L2Nu_TuneCP5_13TeV_powheg_pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v1_privateUL18nanov9/211124_210121/",                     xSection=0.564)
 ZZTo2L2Nu.normalization = 55393059.2321 
 
-#ZZTo2L2Q            = Sample.fromDirectory("ZZTo2L2Q",             "/ZZTo2L2Q_13TeV_powheg_pythia8/",                           xSection=3.28)
-ZZTo2Q2Nu           = Sample.fromDirectory("ZZTo2Q2Nu",            "/eos/vbc/experiments/cms/store/user/prhussai/ZZTo2Q2Nu_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2_privateUL18nanov9/211124_210143/",            xSection=4.04)
-ZZTo2Q2Nu.normalization = 137620490.177
+ZZTo2Q2L            = Sample.fromDirectory("ZZTo2Q2L",             "/eos/vbc/experiments/cms/store/user/prhussai/ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2_privateUL18nanov9/220524_122117/",                           xSection=3.28)
+ZZTo2Q2L.normalization = 161924458.071
+ZZTo2Nu2Q           = Sample.fromDirectory("ZZTo2Nu2Q",            "/eos/vbc/experiments/cms/store/user/prhussai/ZZTo2Nu2Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v3_privateUL18nanov9/220524_122141/",            xSection=4.04)
+ZZTo2Nu2Q.normalization = 37590252.0159
+
+#ZZTo2Q2Nu           = Sample.fromDirectory("ZZTo2Q2Nu",            "/eos/vbc/experiments/cms/store/user/prhussai/ZZTo2Q2Nu_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2_privateUL18nanov9/211124_210143/",            xSection=4.04) ## old version from central production, discontinued now
+#ZZTo2Q2Nu.normalization = 137620490.177
 ZZTo4L              = Sample.fromDirectory("ZZTo4L",               "/eos/vbc/experiments/cms/store/user/prhussai/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2_privateUL18nanov9/211124_210202/",                             xSection=1.256*1.1)
 ZZTo4L.normalization = 131414241.629 
 
-#WZTo1L3Nu           = Sample.fromDirectory("WZTo1L3Nu"  ,          "/WZTo1L3Nu_13TeV_amcatnloFXFX_madspin_pythia8/",            xSection=(47.13)*(3*0.108)*(0.2) )
-WZTo1L1Nu2Q         = Sample.fromDirectory("WZTo1L1Nu2Q",          "/eos/vbc/experiments/cms/store/user/prhussai/WZTo1L1Nu2Q_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2_privateUL18nanov9/211124_210100/",          xSection=10.71)
-WZTo1L1Nu2Q.normalization = 365545828.006
-#WZTo2L2Q            = Sample.fromDirectory("WZTo2L2Q"   ,          "/WZTo2L2Q_13TeV_amcatnloFXFX_madspin_pythia8/",             xSection=5.60)
+#WZTo1L3Nu           = Sample.fromDirectory("WZTo1L3Nu"  ,          "/WZTo1L3Nu_13TeV_amcatnlo",            xSection=(47.13)*(3*0.108)*(0.2) )
+WZTo1L1Nu2Q         = Sample.fromDirectory("WZTo1L1Nu2Q",          "/eos/vbc/experiments/cms/store/user/prhussai/WZTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2_privateUL18nanov9/220524_122028/",          xSection=10.71)
+WZTo1L1Nu2Q.normalization = 144265704.572
+#WZTo1L1Nu2Q         = Sample.fromDirectory("WZTo1L1Nu2Q",          "/eos/vbc/experiments/cms/store/user/prhussai/WZTo1L1Nu2Q_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2_privateUL18nanov9/211124_210100/",          xSection=10.71)  ## old version from central production, discontinued now
+#WZTo1L1Nu2Q.normalization = 365545828.006
+WZTo2Q2L            = Sample.fromDirectory("WZTo2Q2L"   ,          "/eos/vbc/experiments/cms/store/user/prhussai/WZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2_privateUL18nanov9/220524_122051/",             xSection=5.60)
+WZTo2Q2L.normalization = 274146237.028
 #WZTo3LNu            = Sample.fromDirectory("WZTo3LNu",             "/WZTo3LNu",         xSection=4.42965)
 WZTo3LNu_amcatnlo   = Sample.fromDirectory("WZTo3LNu_amcatnlo",    "/eos/vbc/experiments/cms/store/user/prhussai/WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/crab_RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v2_privateUL18nanov9/211124_210040/",        xSection=4.666)
 WZTo3LNu_amcatnlo.normalization = 83145977.5623
@@ -163,15 +173,15 @@ WZTo3LNu_amcatnlo.normalization = 83145977.5623
 
 boson = [
     WWTo2L2Nu,
-#    #WWToLNuQQ,
+    WWTo1L1Nu2Q,
     WW,
     ZZTo2L2Nu,
-#    #ZZTo2L2Q,
-    ZZTo2Q2Nu,
+    ZZTo2Q2L,
+    ZZTo2Nu2Q,
     ZZTo4L,
-#    #WZTo1L3Nu,
+    #WZTo1L3Nu,
     WZTo1L1Nu2Q,
-#    #WZTo2L2Q,
+    WZTo2Q2L,
 #    #WZTo3LNu,
     WZTo3LNu_amcatnlo,
     ]
