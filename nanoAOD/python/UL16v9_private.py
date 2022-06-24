@@ -27,7 +27,7 @@ else:
 from Samples.Tools.config import  redirector
 
 from Samples.Tools.config import dbDir
-dbFile = dbDir+"/DB_Summer16_private_legacy.sql"
+dbFile = dbDir+"/DB_UL16privatev9.sql"
 
 logger.info("Using db file: %s", dbFile)
 
