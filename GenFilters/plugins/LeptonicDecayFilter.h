@@ -29,6 +29,7 @@ private:
 
   int minLeptonicWs_;
   int minLeptonicZs_;
+  double minPt_;
 
 };
 #endif
