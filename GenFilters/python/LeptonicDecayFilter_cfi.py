@@ -5,4 +5,5 @@ leptonicDecayFilter = cms.EDFilter("LeptonicDecayFilter",
     #src = cms.InputTag("externalLHEProducer"),
     minLeptonicWs = cms.int32(0),
     minLeptonicZs = cms.int32(0),
+    minPt = cms.double(0.),
 )   

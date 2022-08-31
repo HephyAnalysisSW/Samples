@@ -8,15 +8,14 @@ LeptonicDecayFilter::LeptonicDecayFilter(const edm::ParameterSet& iConfig):
   genParticlesToken_(consumes<reco::GenParticleCollection>(iConfig.getParameter<InputTag>("src"))),
   //lheEventToken_(consumes<LHEEventProduct>(iConfig.getParameter<InputTag>("src"))),
   minLeptonicWs_ (iConfig.getParameter<int>("minLeptonicWs")),
-  minLeptonicZs_ (iConfig.getParameter<int>("minLeptonicZs")){
-    }
+  minLeptonicZs_ (iConfig.getParameter<int>("minLeptonicZs")),
+  minPt_ (iConfig.getParameter<double>("minPt")){}
 
 LeptonicDecayFilter::~LeptonicDecayFilter() {}
 
 bool LeptonicDecayFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSetup) {
 
   int nleptonicWs(0), nleptonicZs(0);
-
   // read genParticles
   Handle<reco::GenParticleCollection> genParsHandle;
   //iEvent.getByLabel(src_, genParsHandle);
@@ -30,11 +29,11 @@ bool LeptonicDecayFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSet
     reco::GenParticle gp = genPars.at(ig);
 
     if (abs(gp.pdgId()) == 11 or abs(gp.pdgId()) == 13 or abs(gp.pdgId()) == 15) {
-        if (abs(gp.mother(0)->pdgId())==24) {
+        if (abs(gp.mother(0)->pdgId())==24 and gp.mother(0)->pt()>=minPt_ ) {
             nleptonicWs++;
             continue;
         }
-        if (abs(gp.mother(0)->pdgId())==23 and gp.pdgId()>0) {
+        if (abs(gp.mother(0)->pdgId())==23 and gp.pdgId()>0 and gp.mother(0)->pt()>=minPt_) {
             nleptonicZs++;
             continue;
         }
