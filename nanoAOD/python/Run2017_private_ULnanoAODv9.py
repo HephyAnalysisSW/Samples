@@ -172,6 +172,22 @@ SingleMuon = [
     SingleMuon_Run2017E_UL,
     SingleMuon_Run2017F_UL,
 ]
+
+# DoubleMuon
+DoubleMuon_Run2017B_UL       = Sample.fromDirectory("DoubleMuon_Run2017B_UL",        "/DoubleMuon/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2017C_UL       = Sample.fromDirectory("DoubleMuon_Run2017C_UL",        "/DoubleMuon/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2017D_UL       = Sample.fromDirectory("DoubleMuon_Run2017D_UL",        "/DoubleMuon/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2017E_UL       = Sample.fromDirectory("DoubleMuon_Run2017E_UL",        "/DoubleMuon/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2017F_UL       = Sample.fromDirectory("DoubleMuon_Run2017F_UL",        "/DoubleMuon/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+
+DoubleMuon = [
+   DoubleMuon_Run2017B_UL,
+   DoubleMuon_Run2017C_UL,
+   DoubleMuon_Run2017D_UL,
+   DoubleMuon_Run2017E_UL,
+   DoubleMuon_Run2017F_UL,
+]
+
 # SingleElectron
 SingleElectron_Run2017B_UL       = Sample.nanoAODfromDAS("SingleElectron_Run2017B_UL",        "/SingleElectron/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 SingleElectron_Run2017C_UL       = Sample.nanoAODfromDAS("SingleElectron_Run2017C_UL",        "/SingleElectron/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
@@ -187,8 +203,24 @@ SingleElectron = [
     SingleElectron_Run2017F_UL,
 ]
 
+## DoubleEG
+DoubleEG_Run2017B_UL       = Sample.fromDirectory("DoubleEG_Run2017B_UL",        "/DoubleEG/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleEG_Run2017C_UL       = Sample.fromDirectory("DoubleEG_Run2017C_UL",        "/DoubleEG/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleEG_Run2017D_UL       = Sample.fromDirectory("DoubleEG_Run2017D_UL",        "/DoubleEG/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleEG_Run2017E_UL       = Sample.fromDirectory("DoubleEG_Run2017E_UL",        "/DoubleEG/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleEG_Run2017F_UL       = Sample.fromDirectory("DoubleEG_Run2017F_UL",        "/DoubleEG/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+
+DoubleEG = [
+   DoubleEG_Run2017B_UL,
+   DoubleEG_Run2017C_UL,
+   DoubleEG_Run2017D_UL,
+   DoubleEG_Run2017E_UL,
+   DoubleEG_Run2017F_UL,
+
+]
+
 #allSamples = DoubleMuon + MuonEG + DoubleEG + SingleMuon + SingleElectron + JetHT + MET
-allSamples =  MET  + SingleMuon + SingleElectron
+allSamples =  MET  + SingleMuon + SingleElectron + DoubleMuon + DoubleEG
 
 for s in allSamples:
     s.json      = os.path.expandvars("$CMSSW_BASE/src/Samples/Tools/data/json/Cert_294927-306462_13TeV_UL2017_Collisions17_GoldenJSON.txt")

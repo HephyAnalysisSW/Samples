@@ -98,6 +98,21 @@ SingleMuon = [
     SingleMuon_Run2016F_HIPM_UL
 ]
 
+# DoubleMuon
+DoubleMuon_Run2016B_ver2_HIPM_UL  = Sample.nanoAODfromDAS("DoubleMuon_Run2016B_ver2_HIPM_UL",   "/DoubleMuon/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2016C_HIPM_UL       = Sample.nanoAODfromDAS("DoubleMuon_Run2016C_HIPM_UL",        "/DoubleMuon/Run2016C-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2016D_HIPM_UL       = Sample.nanoAODfromDAS("DoubleMuon_Run2016D_HIPM_UL",        "/DoubleMuon/Run2016D-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2016E_HIPM_UL       = Sample.nanoAODfromDAS("DoubleMuon_Run2016E_HIPM_UL",        "/DoubleMuon/Run2016E-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2016F_HIPM_UL       = Sample.nanoAODfromDAS("DoubleMuon_Run2016F_HIPM_UL",        "/DoubleMuon/Run2016F-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+
+DoubleMuon = [
+    DoubleMuon_Run2016B_ver2_HIPM_UL,
+    DoubleMuon_Run2016C_HIPM_UL,
+    DoubleMuon_Run2016D_HIPM_UL,
+    DoubleMuon_Run2016E_HIPM_UL,
+    DoubleMuon_Run2016F_HIPM_UL
+]
+
 # SingleElectron from DAS
 SingleElectron_Run2016B_ver2_HIPM_UL  = Sample.nanoAODfromDAS("SingleElectron_Run2016B_ver2_HIPM_UL",   "/SingleElectron/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 SingleElectron_Run2016C_HIPM_UL       = Sample.nanoAODfromDAS("SingleElectron_Run2016C_HIPM_UL",        "/SingleElectron/Run2016C-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
@@ -113,8 +128,22 @@ SingleElectron = [
     SingleElectron_Run2016F_HIPM_UL
 ]
 
+# DoubleEG
+DoubleEG_Run2016B_ver2_HIPM_UL  = Sample.nanoAODfromDAS("DoubleEG_Run2016B_ver2_HIPM_UL",   "/DoubleEG/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v3/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleEG_Run2016C_HIPM_UL       = Sample.nanoAODfromDAS("DoubleEG_Run2016C_HIPM_UL",        "/DoubleEG/Run2016C-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleEG_Run2016D_HIPM_UL       = Sample.nanoAODfromDAS("DoubleEG_Run2016D_HIPM_UL",        "/DoubleEG/Run2016D-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleEG_Run2016E_HIPM_UL       = Sample.nanoAODfromDAS("DoubleEG_Run2016E_HIPM_UL",        "/DoubleEG/Run2016E-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleEG_Run2016F_HIPM_UL       = Sample.nanoAODfromDAS("DoubleEG_Run2016F_HIPM_UL",        "/DoubleEG/Run2016F-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 
-allSamples =  MET + JetHT + SingleMuon + SingleElectron
+DoubleEG = [
+    DoubleEG_Run2016B_ver2_HIPM_UL,
+    DoubleEG_Run2016C_HIPM_UL,
+    DoubleEG_Run2016D_HIPM_UL,
+    DoubleEG_Run2016E_HIPM_UL,
+    DoubleEG_Run2016F_HIPM_UL
+]
+
+allSamples =  MET + JetHT + SingleMuon + SingleElectron + DoubleMuon + DoubleEG
 
 for s in allSamples:
     s.json      = os.path.expandvars("$CMSSW_BASE/src/Samples/Tools/data/json/Cert_271036-284044_13TeV_Legacy2016_Collisions16_JSON.txt")

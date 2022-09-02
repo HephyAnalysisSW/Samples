@@ -76,7 +76,6 @@ logger.info("Using db file: %s", dbFile)
 ##DoubleEG_Run2018C_UL       = Sample.nanoAODfromDAS("DoubleEG_Run2018C_UL",        "", dbFile=dbFile, redirector=redirector, overwrite=ov)
 ##DoubleEG_Run2018D_UL       = Sample.nanoAODfromDAS("DoubleEG_Run2018D_UL",        "", dbFile=dbFile, redirector=redirector, overwrite=ov)
 ##DoubleEG_Run2018E_UL       = Sample.nanoAODfromDAS("DoubleEG_Run2018E_UL",        "", dbFile=dbFile, redirector=redirector, overwrite=ov)
-##DoubleEG_Run2018F_UL       = Sample.nanoAODfromDAS("DoubleEG_Run2018F_UL",        "", dbFile=dbFile, redirector=redirector, overwrite=ov)
 ##
 ##DoubleEG = [
 ##    DoubleEG_Run2018A_UL,
@@ -84,8 +83,6 @@ logger.info("Using db file: %s", dbFile)
 ##    DoubleEG_Run2018C_UL,
 ##    DoubleEG_Run2018D_UL,
 ##    DoubleEG_Run2018E_UL,
-##    DoubleEG_Run2018F_UL,
-##
 ##]
 #
 ## SingleElectron
@@ -161,6 +158,19 @@ SingleMuon = [
     SingleMuon_Run2018D_UL,
 ]
 
+# DoubleMuon
+DoubleMuon_Run2018A_UL       = Sample.nanoAODfromDAS("DoubleMuon_Run2018A_UL",        "/DoubleMuon/Run2018A-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2018B_UL       = Sample.nanoAODfromDAS("DoubleMuon_Run2018B_UL",        "/DoubleMuon/Run2018B-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2018C_UL       = Sample.nanoAODfromDAS("DoubleMuon_Run2018C_UL",        "/DoubleMuon/Run2018C-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+DoubleMuon_Run2018D_UL       = Sample.nanoAODfromDAS("DoubleMuon_Run2018D_UL",        "/DoubleMuon/Run2018D-UL2018_MiniAODv2_NanoAODv9-v2/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
+
+DoubleMuon = [
+   DoubleMuon_Run2018A_UL,
+   DoubleMuon_Run2018B_UL,
+   DoubleMuon_Run2018C_UL,
+   DoubleMuon_Run2018D_UL,
+]
+
 # SingleElectron
 SingleElectron_Run2018A_UL       = Sample.nanoAODfromDAS("SingleElectron_Run2018A_UL",        "/EGamma/Run2018A-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
 SingleElectron_Run2018B_UL       = Sample.nanoAODfromDAS("SingleElectron_Run2018B_UL",        "/EGamma/Run2018B-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD", dbFile=dbFile, redirector=redirector, overwrite=ov)
@@ -174,9 +184,8 @@ SingleElectron = [
     SingleElectron_Run2018D_UL,
 ]
 
-
 #allSamples = DoubleMuon + MuonEG + DoubleEG + SingleElectron + SingleElectron + JetHT + MET
-allSamples = MET + SingleMuon + SingleElectron
+allSamples = MET + SingleMuon + SingleElectron + DoubleMuon
 
 for s in allSamples:
     s.json      = os.path.expandvars("$CMSSW_BASE/src/Samples/Tools/data/json/Cert_314472-325175_13TeV_Legacy2018_Collisions18_JSON.txt")
