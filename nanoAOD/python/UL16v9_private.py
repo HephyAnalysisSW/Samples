@@ -256,8 +256,8 @@ QCD_HT200to300       = Sample.fromDirectory("QCD_HT200to300",       "/eos/vbc/ex
 QCD_HT200to300.normalization = 43280518.0
 QCD_HT200to300_madgraph       = Sample.fromDirectory("QCD_HT200to300_madgraph",       "/eos/vbc/experiments/cms/store/user/prhussai/QCD_HT200to300_TuneCP5_PSWeights_13TeV-madgraph-pythia8/crab_RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1_privateUL16nanov9/211126_144148/",          xSection=1717000)
 QCD_HT200to300_madgraph.normalization = 17569141.0
-QCD_HT300to500       = Sample.fromDirectory("QCD_HT300to500",       "/eos/vbc/experiments/cms/store/user/prhussai/QCD_HT300to500_TuneCP5_PSWeights_13TeV-madgraph-pythia8/crab_RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1_privateUL16nanov9/211126_144209/",          xSection=351300)
-QCD_HT300to500.normalization = 16747056.0 
+QCD_HT300to500       = Sample.fromDirectory("QCD_HT300to500",       "/eos/vbc/experiments/cms/store/user/prhussai/QCD_HT300to500_TuneCP5_PSWeights_13TeV-madgraphMLM-pythia8/crab_RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1_privateUL16nanov9/220302_220743/",          xSection=351300)
+QCD_HT300to500.normalization = 46489530.0 
 QCD_HT300to500_madgraph       = Sample.fromDirectory("QCD_HT300to500_madgraph",       "/eos/vbc/experiments/cms/store/user/prhussai/QCD_HT300to500_TuneCP5_PSWeights_13TeV-madgraph-pythia8/crab_RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1_privateUL16nanov9/211126_144209/",          xSection=351300)
 QCD_HT300to500_madgraph.normalization = 16747056.0
 QCD_HT500to700_madgraph       = Sample.fromDirectory("QCD_HT500to700_madgraph",       "/eos/vbc/experiments/cms/store/user/prhussai/QCD_HT500to700_TuneCP5_PSWeights_13TeV-madgraph-pythia8/crab_RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1_privateUL16nanov9/211126_144231/",          xSection=31630)

@@ -24,6 +24,11 @@ else:
     logger = logging.getLogger(__name__)
     ov = False
 
+DYJetsToLL_M50_LO             =   Sample.fromDirectory("DYJetsToLL_M50_LO",	"/eos/vbc/experiments/cms/store/user/prhussai/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/crab_RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9_ext1-v1_privateUL17nanov9/211215_223823/",	xSection=2075.14*3)
+DYJetsToLL_M50_LO.normalization = 101796176.0 
+DYJetsToLL_M10to50_LO         =   Sample.fromDirectory("DYJetsToLL_M10to50_LO",	"/eos/vbc/experiments/cms/store/user/prhussai/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/crab_RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1_privateUL17nanov9/211215_223842/",	xSection=18610) 
+DYJetsToLL_M10to50_LO.normalization = 68181831.0
+
 DYJetsToLL_M50_HT70to100      =   Sample.fromDirectory("DYJetsToLL_M50_HT70to100",	"/eos/vbc/experiments/cms/store/user/prhussai/DYJetsToLL_M-50_HT-70to100_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/crab_RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1_privateUL17nanov9/211124_203012/",	 xSection=169.9*1.23)
 DYJetsToLL_M50_HT70to100.normalization = 12205958.0 
 DYJetsToLL_M50_HT100to200     =   Sample.fromDirectory("DYJetsToLL_M50_HT100to200",	"/eos/vbc/experiments/cms/store/user/prhussai/DYJetsToLL_M-50_HT-100to200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/crab_RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1_privateUL17nanov9/211124_203032/",	 xSection=147.4*1.23)
@@ -91,7 +96,10 @@ DYJetsNuNuHT = [
 ]
 
 
-DY = DYJetsM50HT  + DYJetsNuNuHT  + DYJetsM4to50HT
+DY = [
+	DYJetsToLL_M50_LO,
+	DYJetsToLL_M10to50_LO,
+	] + DYJetsM50HT  + DYJetsNuNuHT  + DYJetsM4to50HT
 
 ## ttbar
 TTLep_pow_CP5       = Sample.fromDirectory("TTLep_pow_CP5",            "/eos/vbc/experiments/cms/store/user/prhussai/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/crab_RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v1_privateUL17nanov9/211124_202117/",            xSection=831.762*((3*0.108)**2))
