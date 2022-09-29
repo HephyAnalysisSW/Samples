@@ -226,7 +226,7 @@ QCD_EMEnriched = [
 ## QCD bcToE 
 ## XS from GenXSecAnalyzer (AN2020_170_v7 from TOP-20-010 or UHH data base)
 
-# QCD_bcToE_15to20 = Sample.nanoAODfromDAS("QCD_bcToE_15to20", "/QCD_Pt_15to20_bcToE_TuneCP5_13TeV_pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=187000)
+# QCD_bcToE_15to20 = Sample.nanoAODfromDAS("QCD_bcToE_15to20", "/QCD_Pt_15to20_bcToE_TuneCP5_13TeV_pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v17-v2/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=187000)
 QCD_bcToE_20to30 = Sample.nanoAODfromDAS("QCD_bcToE_20to30", "/QCD_Pt_20to30_bcToE_TuneCP5_13TeV_pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=305000)
 QCD_bcToE_30to80 = Sample.nanoAODfromDAS("QCD_bcToE_30to80", "/QCD_Pt_30to80_bcToE_TuneCP5_13TeV_pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=361000)
 QCD_bcToE_80to170 = Sample.nanoAODfromDAS("QCD_bcToE_80to170", "/QCD_Pt_80to170_bcToE_TuneCP5_13TeV_pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=33800)
@@ -244,7 +244,7 @@ QCD_bcToE = [
 
 ################################################################################
 
-QCD = QCD_MuEnriched + QCD_EMEnriched + QCD_bcToE  + QCD + [WJetsToLNu]
+QCD = QCD_MuEnriched + QCD_EMEnriched + QCD_bcToE
 
 ################################################################################
 # W+jets 

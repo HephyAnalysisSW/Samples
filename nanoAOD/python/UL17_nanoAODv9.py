@@ -203,7 +203,7 @@ QCD_MuEnriched = [
 ## XS from GenXSecAnalyzer (AN2020_170_v7 from TOP-20-010 or UHH data base)
 
 QCD_EMEnriched_15to20 = Sample.nanoAODfromDAS("QCD_EMEnriched_15to20", "/QCD_Pt-15to20_EMEnriched_TuneCP5_13TeV-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=1320000)
-QCD_EMEnriched_20to30 = Sample.nanoAODfromDAS("QCD_EMEnriched_20to30", "/QCD_Pt-20to30_EMEnriched_TuneCP5_13TeV-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=4910000)
+QCD_EMEnriched_20to30 = Sample.nanoAODfromDAS("QCD_EMEnriched_20to30", "/QCD_Pt-20to30_EMEnriched_TuneCP5_13TeV-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=4910000)
 QCD_EMEnriched_30to50 = Sample.nanoAODfromDAS("QCD_EMEnriched_30to50", "/QCD_Pt-30to50_EMEnriched_TuneCP5_13TeV-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=6420000)
 QCD_EMEnriched_50to80 = Sample.nanoAODfromDAS("QCD_EMEnriched_50to80", "/QCD_Pt-50to80_EMEnriched_TuneCP5_13TeV-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=1990000)
 QCD_EMEnriched_80to120 = Sample.nanoAODfromDAS("QCD_EMEnriched_80to120", "/QCD_Pt-80to120_EMEnriched_TuneCP5_13TeV-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=367000)
@@ -244,14 +244,14 @@ QCD_bcToE = [
 
 ################################################################################
 
-QCD = QCD_MuEnriched + QCD_EMEnriched + QCD_bcToE  + QCD + [WJetsToLNu]
+QCD = QCD_MuEnriched + QCD_EMEnriched + QCD_bcToE
 
 ################################################################################
 # W+jets 
 WJetsToLNu = Sample.nanoAODfromDAS("WJetsToLNu", "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=61500)
 
 
-allSamples = DY + TTbar + SingleTop + multiboson + TTX + rareTop
+allSamples = DY + TTbar + SingleTop + multiboson + TTX + rareTop  + QCD + [WJetsToLNu]
 
 for s in allSamples:
     s.isData = False
