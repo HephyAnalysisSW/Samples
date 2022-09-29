@@ -231,7 +231,7 @@ QCD_bcToE_15to20 = Sample.nanoAODfromDAS("QCD_bcToE_15to20", "/QCD_Pt_15to20_bcT
 QCD_bcToE_20to30 = Sample.nanoAODfromDAS("QCD_bcToE_20to30", "/QCD_Pt_20to30_bcToE_TuneCP5_13TeV_pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=305000)
 QCD_bcToE_30to80 = Sample.nanoAODfromDAS("QCD_bcToE_30to80", "/QCD_Pt_30to80_bcToE_TuneCP5_13TeV_pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=361000)
 QCD_bcToE_80to170 = Sample.nanoAODfromDAS("QCD_bcToE_80to170", "/QCD_Pt_80to170_bcToE_TuneCP5_13TeV_pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=33800)
-# QCD_bcToE_170to250 = Sample.nanoAODfromDAS("QCD_bcToE_170to250", "/QCD_Pt_170to250_bcToE_TuneCP5_13TeV_pythia8/RunIISummer20UL18NanoAODv2-106X_upgrade2018_realistic_v15_L1v1-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=2130) # NanoAODv9 not available
+QCD_bcToE_170to250 = Sample.nanoAODfromDAS("QCD_bcToE_170to250", "/QCD_Pt_170to250_bcToE_TuneCP5_13TeV_pythia8/RunIISummer20UL18NanoAODv2-106X_upgrade2018_realistic_v15_L1v1-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=2130) # NanoAODv9 not available
 QCD_bcToE_250toInf = Sample.nanoAODfromDAS("QCD_bcToE_250toInf", "/QCD_Pt_250toInf_bcToE_TuneCP5_13TeV_pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, xSection=563)
 
 QCD_bcToE = [
@@ -239,7 +239,7 @@ QCD_bcToE = [
     QCD_bcToE_20to30,
     QCD_bcToE_30to80,
     QCD_bcToE_80to170,
-    # QCD_bcToE_170to250,
+    QCD_bcToE_170to250,
     QCD_bcToE_250toInf,
 ]
 
