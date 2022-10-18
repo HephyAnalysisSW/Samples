@@ -16,15 +16,15 @@ def copy( job ):
         #    pass
             
     if not os.path.exists(target):
-        print ( " ".join( cmd ) )
+        print(( " ".join( cmd ) ))
         subprocess.call(cmd)
     else:
-        print( "Found %s. Skip.", target)
+        print(( "Found %s. Skip.", target))
 
 def echo( job ):
     source, target = job
     cmd = ["/usr/bin/xrdcp", source, target ]
-    print (" ".join( cmd ))
+    print((" ".join( cmd )))
 
 def checkFile( job ):
     from Analysis.Tools.helpers import checkRootFile, deepCheckRootFile
@@ -85,18 +85,18 @@ class AutoClass:
                 jobs.append( filename )
 
         if cores==1:
-            failed = map(checkFile, jobs)
+            failed = list(map(checkFile, jobs))
         else:
             pool = Pool( processes=cores )
             failed = pool.map( checkFile, jobs )
             pool.close()
             pool.join()
 
-        failed = filter( lambda res: res, failed )
+        failed = [res for res in failed if res]
 
         if len(failed)>0:
             for filename in failed:
-                print filename
+                print(filename)
             raise RuntimeError("Found %i missing files!"%len(failed)) 
 
     def check_presence( self, local_directory, debug=False):
@@ -109,6 +109,6 @@ class AutoClass:
                     test = local_directory + '/store/'+filename.split('/store/')[-1]
                     if not os.path.isfile(test):
                         complete = False
-                        print "Sample %s not complete in %s" %( sample.name, local_directory)
+                        print("Sample %s not complete in %s" %( sample.name, local_directory))
                         if debug==True:
-                            print "Missing file: %s" % test
+                            print("Missing file: %s" % test)

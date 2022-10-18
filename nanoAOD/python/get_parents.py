@@ -44,7 +44,7 @@ for s in allSamples:
         proc = subprocess.Popen(['/cvmfs/cms.cern.ch/common/dasgoclient', '--query', query], stdout=subprocess.PIPE)
         miniAOD_parent = proc.stdout.readline().rstrip()
         if options.check_in_miniAOD is None:
-            print "Needed:", miniAOD_parent
+            print("Needed:", miniAOD_parent)
 
         # write json file for top nanoAOD production
         # https://github.com/cms-top/cmssw/blob/topNanoV6_from-CMSSW_10_2_18/PhysicsTools/NanoAOD/test/README.md
@@ -72,20 +72,20 @@ for s in allSamples:
                         json_name+="_"+ext_str
                     break
 
-            if not samples_dict.has_key(year):
+            if year not in samples_dict:
                 samples_dict[year] = {}
             if miniAOD_parent in veto:
-                print "vetoed", miniAOD_parent
+                print("vetoed", miniAOD_parent)
             else:
                 samples_dict[year][miniAOD_parent] = {'name':json_name} 
              
     else:
-        print "No DAS name found for %s" % s.name
+        print("No DAS name found for %s" % s.name)
     if mAOD_samples is not None and miniAOD_parent is not None:
         if mAOD_samples.find(miniAOD_parent): 
-            print "Found in ", mAOD_samples.find(miniAOD_parent)
+            print("Found in ", mAOD_samples.find(miniAOD_parent))
             pass
         else:
-            print "NOT found:", miniAOD_parent 
+            print("NOT found:", miniAOD_parent) 
 if options.json:
     json.dump(samples_dict, file( options.module+'.json','w'))
