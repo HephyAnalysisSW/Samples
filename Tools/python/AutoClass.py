@@ -109,6 +109,6 @@ class AutoClass:
                     test = local_directory + '/store/'+filename.split('/store/')[-1]
                     if not os.path.isfile(test):
                         complete = False
-                        print("Sample %s not complete in %s" %( sample.name, local_directory))
+                        print(("Sample %s not complete in %s" %( sample.name, local_directory)))
                         if debug==True:
-                            print("Missing file: %s" % test)
+                            print(("Missing file: %s" % test))
