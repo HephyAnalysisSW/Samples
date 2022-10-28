@@ -7,7 +7,7 @@ import os
 if 'SAMPLES_DBDIR' in os.environ:
     dbDir = os.environ['SAMPLES_DBDIR'] 
 elif os.environ['USER'] in ['dietrich.liko']:
-    dbDir = '/users/dietrich.liko/caches/Samples'
+    dbDir = '/groups/hephy/cms/dietrich.liko/caches/Samples'
 elif os.environ['USER'] in ['llechner']:
     dbDir = '/afs/hephy.at/data/llechner01/TTGammaEFT/cache/samples/'
 elif os.environ['USER'] in ['lukas.lechner']: #CLIP
@@ -39,6 +39,7 @@ redirector_global     = 'root://cms-xrd-global.cern.ch/'
 #redirector_clip_local = '/scratch-cbe/users/hephy/'
 #redirector_clip       = 'root://hephyse.oeaw.ac.at:11001/'
 redirector_clip       = 'root://eos.grid.vbc.ac.at///eos/vbc/incoming/'
+redirector_clip       = 'root://eos.grid.vbc.ac.at/'
 #redirector_clip       = '/eos/vbc/incoming/'
 
 #redirector            = 'root://hephyse.oeaw.ac.at:11001/'
