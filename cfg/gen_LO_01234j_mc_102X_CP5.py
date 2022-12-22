@@ -9,16 +9,16 @@ options.register('gridpack',  '$CMSSW_BASE/src/Samples/cfg/gridpack.tar.xz',  Va
 options.register('outputDir', './',                 VarParsing.VarParsing.multiplicity.singleton, VarParsing.VarParsing.varType.string,  "Where to store the output root file?")
 options.maxEvents=1000 # maxEvents is a registered option. 
 
-options.outputDir = os.path.expandvars( options.outputDir )
-options.gridpack  = os.path.expandvars( options.gridpack )
-
 if not 'ipython' in VarParsing.sys.argv[0]: options.parseArguments()
 else: print "No parsing of arguments!"
 
+options.outputDir = os.path.expandvars( options.outputDir )
+
+from Samples.Tools.FileFetcher import FileFetcher
+options.gridpack  = os.path.expandvars( FileFetcher(options.gridpack, verbose=True) if options.gridpack.startswith('root://') else options.gridpack )
+
 if not os.path.isdir(options.outputDir):
     os.makedirs(options.outputDir)
-
-
 
 # Auto generated configuration file
 # using: 
