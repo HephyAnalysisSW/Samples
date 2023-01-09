@@ -17,7 +17,7 @@ options.outputDir = os.path.expandvars( options.outputDir )
 if not os.path.isdir(options.outputDir):
     os.makedirs(options.outputDir)
 
-#from Samples.Tools.FileFetcher import FileFetcher
+#options.gridpack  = os.path.expandvars( options.gridpack )
 #options.gridpack  = os.path.expandvars( FileFetcher(options.gridpack, verbose=True) if options.gridpack.startswith('root://') else options.gridpack )
 options.gridpack  = os.path.expandvars( options.gridpack )
 

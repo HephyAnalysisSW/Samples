@@ -14,7 +14,7 @@ else: print "No parsing of arguments!"
 
 options.outputDir = os.path.expandvars( options.outputDir )
 
-from Samples.Tools.FileFetcher import FileFetcher
+options.gridpack  = os.path.expandvars( options.gridpack )
 options.gridpack  = os.path.expandvars( FileFetcher(options.gridpack, verbose=True) if options.gridpack.startswith('root://') else options.gridpack )
 
 if not os.path.isdir(options.outputDir):

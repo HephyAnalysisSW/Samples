@@ -42,7 +42,7 @@ config.JobType.disableAutomaticOutputCollection = False
 config.JobType.allowUndistributedCMSSW = True
 #config.JobType.numCores = 1
 config.JobType.maxMemoryMB = 3500 #for genToReco
-
+config.JobType.scriptExe = 'myscript.sh'
 config.section_("Data")
 config.Data.splitting = 'EventBased'
 
