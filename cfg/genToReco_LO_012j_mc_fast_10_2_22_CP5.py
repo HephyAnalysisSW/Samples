@@ -10,7 +10,6 @@ if not 'ipython' in VarParsing.sys.argv[0]: options.parseArguments()
 else: print "No parsing of arguments!"
 
 options.gridpack  = os.path.expandvars( options.gridpack )
-options.gridpack  = os.path.expandvars( FileFetcher(options.gridpack, verbose=True) if options.gridpack.startswith('root://') else options.gridpack )
 
 # Auto generated configuration file
 # using: 
