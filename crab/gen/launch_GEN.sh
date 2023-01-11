@@ -388,6 +388,6 @@
 #dir="/eos/vbc/group/cms/robert.schoefbeck/gridpacks/ParticleNet/"
 #python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label PNet --unitsPerJob 10000 --totalUnits 1000000 --publish --gridpackDir ${dir} --gridpack tt01j-1l-NPtHad_HT800_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
 #python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label t-sch-RefPoint-noWidthRW --unitsPerJob 10000 --totalUnits 1000000 --publish --gridpackDir ${dir} --gridpack t-sch-RefPoint-noWidthRW_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
-dir="/groups/hephy/cms/robert.schoefbeck/gridpacks/"
+dir="/eos/vbc/group/cms/robert.schoefbeck/gridpacks/4top/"
 #python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label allOps-t-sch-RefPoint-noWidthRW --unitsPerJob 10000 --totalUnits 1000000 --publish --gridpackDir ${dir} --gridpack t-sch-RefPoint-noWidthRW_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
-python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label test2 --unitsPerJob 100 --totalUnits 1000 --publish --gridpack root://eos.grid.vbc.ac.at//eos/vbc/group/cms/robert.schoefbeck/gridpacks/4top/TTTT01j_MS_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
+python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label test2 --unitsPerJob 100 --totalUnits 1000 --publish --gridpackDir ${dir} --gridpack root://eos.grid.vbc.ac.at//eos/vbc/group/cms/robert.schoefbeck/gridpacks/4top/TTTT01j_MS_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
