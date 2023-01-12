@@ -80,7 +80,25 @@ while [[ $icnt -lt 4 ]]; do
 done
 cmsRun -j FrameworkJobReport.xml -p PSet.py
 """.format(gridpack=options.gridpack) )
+    config.JobType.scriptExe = 'myscript.sh'
+elif options.gridpack.startswith("https://"):
+    if os.path.exists("myscript.sh"):
+        os.remove("myscript.sh")
+    with open("myscript.sh",'w') as f:
+        #f.write( "xrdcp {gridpack} gridpack.tar.xz\ncmsRun -j FrameworkJobReport.xml -p PSet.py".format(gridpack=options.gridpack) )
+        f.write( """sleep  $[ ( $RANDOM % 100 ) ]s
+icnt=0
+while [[ $icnt -lt 4 ]]; do
+         curl -L  -o gridpack.tar.xz {gridpack} 
+     if [[ $rc -eq 0 ]]; then
+        break
+     fi
+     sleep 10
 
+    icnt=$((icnt+1))
+done
+cmsRun -j FrameworkJobReport.xml -p PSet.py
+""".format(gridpack=options.gridpack) )
     config.JobType.scriptExe = 'myscript.sh'
 else:
     gridpackFile = os.path.expandvars( os.path.join( options.gridpackDir, options.gridpack ) )

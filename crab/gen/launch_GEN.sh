@@ -390,4 +390,4 @@
 #python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label t-sch-RefPoint-noWidthRW --unitsPerJob 10000 --totalUnits 1000000 --publish --gridpackDir ${dir} --gridpack t-sch-RefPoint-noWidthRW_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
 dir="/eos/vbc/group/cms/robert.schoefbeck/gridpacks/4top/"
 #python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label allOps-t-sch-RefPoint-noWidthRW --unitsPerJob 10000 --totalUnits 1000000 --publish --gridpackDir ${dir} --gridpack t-sch-RefPoint-noWidthRW_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
-python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label test2 --unitsPerJob 100 --totalUnits 1000 --publish --gridpackDir ${dir} --gridpack root://eos.grid.vbc.ac.at//eos/vbc/group/cms/robert.schoefbeck/gridpacks/4top/TTTT01j_MS_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
+python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label test2 --unitsPerJob 10000 --totalUnits 2500000 --publish --gridpackDir ${dir} --gridpack  https://schoef.web.cern.ch/schoef/gridpacks/4top/TTbb01j_MS_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
