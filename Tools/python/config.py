@@ -20,8 +20,8 @@ elif os.environ['USER'] in ['priya.hussain']:
     dbDir = '/mnt/hephy/cms/priya.hussain/StopsCompressed/cache/samples/'
 elif os.environ['USER'] in ['schoef']:
     dbDir = '/afs/hephy.at/data/rschoefbeck01/nanoAOD/'
-elif os.environ['USER'] in ['robert.schoefbeck']:
-    dbDir = '/users/robert.schoefbeck/caches/Samples'
+elif os.environ['USER'] in ['robert.schoefbeck','maryam.shooshtari']:
+    dbDir = '/users/maryam.shooshtari/caches/Samples'
 elif os.environ['USER'] in ['benjamin.wilhelmy']:
     dbDir = '/users/robert.schoefbeck/caches/Samples'
 elif os.environ['USER'] in ['erich.birngruber']:
@@ -34,6 +34,8 @@ elif os.environ['USER'] in ['mzarucki']:
     dbDir = '/afs/hephy.at/data/mzarucki02/nanoAOD/caches'
 elif os.environ['USER'] in ['dennis.schwarz']:
     dbDir = '/users/dennis.schwarz/caches/Samples'
+# elif os.environ['USER'] in ['maryam.shooshtari']:
+#     dbDir = '/users/maryam.shooshtari/caches/Samples'
 else:
     dbDir = '/afs/hephy.at/data/%s01/nanoAOD/'%os.environ['USER']
 
