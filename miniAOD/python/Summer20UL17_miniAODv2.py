@@ -287,6 +287,16 @@ SMS_T2tt_mStop_500_mLSP_470             = FWLiteSample.fromDAS("SMS_T2tt_mStop_5
 SMS_T2tt_4bd_mStop_300_mLSP_290             = FWLiteSample.fromDAS("SMS_T2tt_4bd_mStop_300_mLSP_290",	"/SMS-T2tt-4bd_genMET-100_genHT200_mStop-300_mLSP-290_TuneCP5_LLStop_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 SMS_T2tt_4bd_mStop_350_mLSP_335             = FWLiteSample.fromDAS("SMS_T2tt_4bd_mStop_350_mLSP_335",	"/SMS-T2tt-4bd_genMET-100_genHT200_mStop-350_mLSP-335_TuneCP5_LLStop_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 SMS_T2tt_4bd_mStop_400_mLSP_380             = FWLiteSample.fromDAS("SMS_T2tt_4bd_mStop_400_mLSP_380",	"/SMS-T2tt-4bd_genMET-100_genHT200_mStop-400_mLSP-380_TuneCP5_LLStop_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+SMS_T2tt_4bd_FS_mStop_300_mLSP_290      = FWLiteSample.fromDAS("SMS_T2tt_4bd_FS_mStop_300_mLSP_290",    "/SMS-T2tt-4bd_genMET-100_genHT200_mStop-300_mLSP-290_TuneCP5_LLStop_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-FSUL17_106X_mc2017_realistic_v9-v2/MINIAODSIM",     dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_4bd_FS_mStop_350_mLSP_335      = FWLiteSample.fromDAS("SMS_T2tt_4bd_FS_mStop_350_mLSP_335",    "/SMS-T2tt-4bd_genMET-100_genHT200_mStop-350_mLSP-335_TuneCP5_LLStop_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-FSUL17_106X_mc2017_realistic_v9-v2/MINIAODSIM",     dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_4bd_FS_mStop_400_mLSP_380      = FWLiteSample.fromDAS("SMS_T2tt_4bd_FS_mStop_400_mLSP_380",    "/SMS-T2tt-4bd_genMET-100_genHT200_mStop-400_mLSP-380_TuneCP5_LLStop_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-FSUL17_106X_mc2017_realistic_v9-v2/MINIAODSIM",     dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+
+SMS_T2tt_FS_mStop_500_mLSP_420          = FWLiteSample.fromDAS("SMS_T2tt_FS_mStop_500_mLSP_420",        "/SMS-T2tt_genMET-100_genHT200_mStop-500_mLSP-420_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-FSUL17_106X_mc2017_realistic_v9-v2/MINIAODSIM",        dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_FS_mStop_500_mLSP_450          = FWLiteSample.fromDAS("SMS_T2tt_FS_mStop_500_mLSP_450",        "/SMS-T2tt_genMET-100_genHT200_mStop-500_mLSP-450_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-FSUL17_106X_mc2017_realistic_v9-v2/MINIAODSIM",        dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+SMS_T2tt_FS_mStop_500_mLSP_470          = FWLiteSample.fromDAS("SMS_T2tt_FS_mStop_500_mLSP_470",        "/SMS-T2tt_genMET-100_genHT200_mStop-500_mLSP-470_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17MiniAODv2-FSUL17_106X_mc2017_realistic_v9-v2/MINIAODSIM",        dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
 compSUSY = [
 		SMS_T2tt_mStop_500_mLSP_420,
 		SMS_T2tt_mStop_500_mLSP_450,
@@ -294,6 +304,14 @@ compSUSY = [
 		SMS_T2tt_4bd_mStop_300_mLSP_290,
 		SMS_T2tt_4bd_mStop_350_mLSP_335,
 		SMS_T2tt_4bd_mStop_400_mLSP_380,
+
+		SMS_T2tt_4bd_FS_mStop_300_mLSP_290,
+		SMS_T2tt_4bd_FS_mStop_350_mLSP_335,
+		SMS_T2tt_4bd_FS_mStop_400_mLSP_380,
+
+		SMS_T2tt_FS_mStop_500_mLSP_420,
+		SMS_T2tt_FS_mStop_500_mLSP_450,
+		SMS_T2tt_FS_mStop_500_mLSP_470,
 		]
 
 
