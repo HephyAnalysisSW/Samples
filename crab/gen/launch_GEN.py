@@ -24,7 +24,6 @@ parser.add_option("--gridpack",         dest="gridpack",                        
 print "## Starting submission to crab for gridpack %s ##"%(options.gridpack)
 
 # GEN production using gridpacks
-gridpackFile = os.path.expandvars( os.path.join( options.gridpackDir, options.gridpack ) )
 cfgFile      = os.path.join( cfgPath, "%s.py" % options.config )
 
 # run in CMSSW_9_3_1
@@ -60,11 +59,51 @@ config.Site.storageSite = 'T2_AT_Vienna'
 config.section_("User")
 
 config.Data.outputDatasetTag     = options.production_label
-config.JobType.inputFiles        = [gridpackFile] if not gridpackFile.startswith('/cvmfs/') else []
 config.General.requestName       = options.production_label
 config.Data.outputPrimaryDataset = config.General.requestName # dataset name
 
-config.JobType.pyCfgParams = ['gridpack=../'+options.gridpack if not gridpackFile.startswith('/cvmfs/') else 'gridpack='+gridpackFile]
+if options.gridpack.startswith("root://"):
+    if os.path.exists("myscript.sh"):
+        os.remove("myscript.sh")
+    with open("myscript.sh",'w') as f:
+        #f.write( "xrdcp {gridpack} gridpack.tar.xz\ncmsRun -j FrameworkJobReport.xml -p PSet.py".format(gridpack=options.gridpack) )
+        f.write( """sleep  $[ ( $RANDOM % 100 ) ]s
+icnt=0
+while [[ $icnt -lt 4 ]]; do
+        xrdcp -t 30 {gridpack} gridpack.tar.xz
+     if [[ $rc -eq 0 ]]; then
+        break
+     fi
+     sleep 10
+
+    icnt=$((icnt+1))
+done
+cmsRun -j FrameworkJobReport.xml -p PSet.py
+""".format(gridpack=options.gridpack) )
+    config.JobType.scriptExe = 'myscript.sh'
+elif options.gridpack.startswith("https://"):
+    if os.path.exists("myscript.sh"):
+        os.remove("myscript.sh")
+    with open("myscript.sh",'w') as f:
+        #f.write( "xrdcp {gridpack} gridpack.tar.xz\ncmsRun -j FrameworkJobReport.xml -p PSet.py".format(gridpack=options.gridpack) )
+        f.write( """sleep  $[ ( $RANDOM % 100 ) ]s
+icnt=0
+while [[ $icnt -lt 4 ]]; do
+         curl -L  -o gridpack.tar.xz {gridpack} 
+     if [[ $rc -eq 0 ]]; then
+        break
+     fi
+     sleep 10
+
+    icnt=$((icnt+1))
+done
+cmsRun -j FrameworkJobReport.xml -p PSet.py
+""".format(gridpack=options.gridpack) )
+    config.JobType.scriptExe = 'myscript.sh'
+else:
+    gridpackFile = os.path.expandvars( os.path.join( options.gridpackDir, options.gridpack ) )
+    config.JobType.inputFiles        = [gridpackFile] if not gridpackFile.startswith('/cvmfs/') else []
+    config.JobType.pyCfgParams = ['gridpack=../'+options.gridpack if not gridpackFile.startswith('/cvmfs/') else 'gridpack='+gridpackFile]
 
 if options.dryrun:
     print "Processing %s" %( options.gridpack )

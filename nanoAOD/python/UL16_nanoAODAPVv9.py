@@ -49,11 +49,36 @@ logger.info("Using db file: %s", dbFile)
 DYJetsToLL_M10to50       = Sample.nanoAODfromDAS("DYJetsToLL_M10to50_LO",   "/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=18610)
 DYJetsToLL_M50           = Sample.nanoAODfromDAS("DYJetsToLL_M50",     "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=2075.14*3)
 
+# x-secs using runXSecAnalyzer
+DYJetsToLL_M50_HT100to200 = Sample.nanoAODfromDAS("DYJetsToLL_M50_HT100to200","/DYJetsToLL_M-50_HT-100to200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=147.4*1.23)
+DYJetsToLL_M50_HT200to400 = Sample.nanoAODfromDAS("DYJetsToLL_M50_HT200to400","/DYJetsToLL_M-50_HT-200to400_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=40.99*1.23)
+DYJetsToLL_M50_HT400to600 = Sample.nanoAODfromDAS("DYJetsToLL_M50_HT400to600","/DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.678*1.23)
+DYJetsToLL_M50_HT600to800 = Sample.nanoAODfromDAS("DYJetsToLL_M50_HT600to800","/DYJetsToLL_M-50_HT-600to800_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.367*1.23)
+DYJetsToLL_M50_HT800to1200 = Sample.nanoAODfromDAS("DYJetsToLL_M50_HT800to1200","/DYJetsToLL_M-50_HT-800to1200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.6304*1.23)
+DYJetsToLL_M50_HT1200to2500 = Sample.nanoAODfromDAS("DYJetsToLL_M50_HT1200to2500","/DYJetsToLL_M-50_HT-1200to2500_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.1514*1.23)
+DYJetsToLL_M50_HT2500toInf = Sample.nanoAODfromDAS("DYJetsToLL_M50_HT2500toInf","/DYJetsToLL_M-50_HT-2500toInf_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.003565*1.23)
+
+
+DYJetsToLL_M4to50_HT100to200 = Sample.nanoAODfromDAS("DYJetsToLL_M4to50_HT100to200","/DYJetsToLL_M-4to50_HT-100to200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v3/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=204.0)#LO
+DYJetsToLL_M4to50_HT200to400 = Sample.nanoAODfromDAS("DYJetsToLL_M4to50_HT200to400","/DYJetsToLL_M-4to50_HT-200to400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=54.39)#LO
+DYJetsToLL_M4to50_HT400to600 = Sample.nanoAODfromDAS("DYJetsToLL_M4to50_HT400to600","/DYJetsToLL_M-4to50_HT-400to600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v3/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.697)#LO
+DYJetsToLL_M4to50_HT600toInf = Sample.nanoAODfromDAS("DYJetsToLL_M4to50_HT600toInf","/DYJetsToLL_M-4to50_HT-600toInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.85)#LO
+
 
 DY = [
     DYJetsToLL_M10to50,
     DYJetsToLL_M50,
-]
+    DYJetsToLL_M50_HT100to200,
+    DYJetsToLL_M50_HT200to400,
+    DYJetsToLL_M50_HT400to600,
+    DYJetsToLL_M50_HT600to800,
+    DYJetsToLL_M50_HT800to1200,
+    DYJetsToLL_M50_HT1200to2500,
+    DYJetsToLL_M50_HT2500toInf,
+    DYJetsToLL_M4to50_HT100to200,
+    DYJetsToLL_M4to50_HT200to400,
+    DYJetsToLL_M4to50_HT400to600,
+    DYJetsToLL_M4to50_HT600toInf]
 
 ################################################################################
 # ttbar
@@ -61,11 +86,13 @@ DY = [
 TTLep_pow_CP5       = Sample.nanoAODfromDAS("TTLep_pow_CP5",            "/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",             dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=831.762*((3*0.108)**2))
 TTSingleLep_pow_CP5 = Sample.nanoAODfromDAS("TTSingleLep_pow_CP5",      "/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=831.762*(3*0.108)*(1-3*0.108)*2)
 TTHad_pow_CP5       = Sample.nanoAODfromDAS("TTHad_pow_CP5",            "/TTToHadronic_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",          dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=831.762*((1-3*0.108)**2))
+TTbb                = Sample.nanoAODfromDAS("TTbb",     "/TTbb_4f_TTTo2L2Nu_TuneCP5-Powheg-Openloops-Pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.59)
 
 TTbar = [
     TTLep_pow_CP5,
     TTSingleLep_pow_CP5,
     TTHad_pow_CP5,
+    TTbb
 ]
 
 ################################################################################
@@ -81,6 +108,7 @@ TTZToQQ             = Sample.nanoAODfromDAS("TTZToQQ",          "/TTZToQQ_TuneCP
 TTZToLLNuNu         = Sample.nanoAODfromDAS("TTZToLLNuNu",        "/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.2728)
 TTZToLLNuNu_m1to10  = Sample.nanoAODfromDAS("TTZToLLNuNu_m1to10", "/TTZToLL_M-1to10_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM", dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.0493)
 TTZ_LO              = Sample.nanoAODfromDAS("TTZ_LO",           "/ttZJets_TuneCP5_13TeV_madgraphMLM_pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.5297/0.692)
+TTW_LO              = Sample.nanoAODfromDAS("TTW_LO","/ttWJets_TuneCP5_13TeV_madgraphMLM_pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  dbFile=    dbFile, redirector=redirector, overwrite=ov, xSection=0.4611)
 
 
 TTX = [
@@ -94,6 +122,7 @@ TTX = [
     TTZToLLNuNu,
     TTZToLLNuNu_m1to10,
     TTZ_LO,
+    TTW_LO
 ]
 
 ################################################################################
@@ -141,6 +170,21 @@ WZZ                 = Sample.nanoAODfromDAS("WZZ",                  "/WZZ_TuneCP
 ZZZ                 = Sample.nanoAODfromDAS("ZZZ",                  "/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",               dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.01398)
 WZTo3LNu            = Sample.nanoAODfromDAS("WZTo3LNu",             "/WZTo3LNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.42965)
 
+WWTo2L2Nu           = Sample.nanoAODfromDAS("WWTo2L2Nu","/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=12.178)
+WWDoubleTo2L        = Sample.nanoAODfromDAS("WWDoubleTo2L","/WWTo2L2Nu_TuneCP5_DoubleScattering_13TeV-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.2094)
+WWTo1L1Nu2Q         = Sample.nanoAODfromDAS("WWTo1L1Nu2Q","/WWTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=49.997)
+WWTo4Q              = Sample.nanoAODfromDAS("WWTo4Q","/WWTo4Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v3/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=51.723)
+
+ZZTo2L2Nu           = Sample.nanoAODfromDAS("ZZTo2L2Nu","/ZZTo2L2Nu_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=0.564)
+ZZTo2L2Q            = Sample.nanoAODfromDAS("ZZTo2L2Q","/ZZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=3.28)
+ZZTo2Q2Nu           = Sample.nanoAODfromDAS("ZZTo2Q2Nu","/ZZTo2Nu2Q_5f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=4.04)
+ZZTo4L              = Sample.nanoAODfromDAS("ZZTo4L","/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=1.256*1.1)
+
+WZTo1L3Nu             = Sample.nanoAODfromDAS("WZTo1L3Nu", "/WZTo1L3Nu_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=(47.13)*(3*0.108)*(0.2))
+WZTo1L1Nu2Q           = Sample.nanoAODfromDAS("WZTo1L1Nu2Q","/WZTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=10.71)
+WZTo2L2Q              = Sample.nanoAODfromDAS("WZTo2L2Q","/WZTo2Q2L_mllmin4p0_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=5.60)
+
+
 multiboson = [
     # VVTo2L2Nu,
     WW,
@@ -151,6 +195,17 @@ multiboson = [
     WZZ,
     ZZZ,
     WZTo3LNu,
+    WWTo2L2Nu,   
+    WWDoubleTo2L,  
+    WWTo1L1Nu2Q, 
+    WWTo4Q,      
+    ZZTo2L2Nu,   
+    ZZTo2L2Q,    
+    ZZTo2Q2Nu,   
+    ZZTo4L,
+    WZTo1L3Nu,   
+    WZTo1L1Nu2Q, 
+    WZTo2L2Q  
 ]
 
 ################################################################################
