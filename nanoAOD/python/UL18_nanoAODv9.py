@@ -37,7 +37,6 @@ except:
             from Samples.Tools.config import redirector_global as redirector
     else:
         from Samples.Tools.config import redirector as redirector
-print redirector
 # DB
 from Samples.Tools.config import dbDir
 dbFile = dbDir+'/DB_UL18_nanoAODv9.sql'
