@@ -35,7 +35,7 @@ logger.info("Using db file: %s", dbFile)
 
 
 ##WJets_HT
-#WJetsToLNu_HT70To100             = FWLiteSample.fromDAS("WJetsToLNu_HT70To100",    "/WJetsToLNu_HT-70To100_TuneCP5_13TeV-madgraphMLM-pythia8/", 		dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+WJetsToLNu_HT70To100             = FWLiteSample.fromDAS("WJetsToLNu_HT70To100",    "/WJetsToLNu_HT-70To100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/MINIAODSIM",	dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 WJetsToLNu_HT100To200            = FWLiteSample.fromDAS("WJetsToLNu_HT100To200",   "/WJetsToLNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/MINIAODSIM", 	dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 WJetsToLNu_HT200To400            = FWLiteSample.fromDAS("WJetsToLNu_HT200To400",   "/WJetsToLNu_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/MINIAODSIM", 	dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 WJetsToLNu_HT400To600            = FWLiteSample.fromDAS("WJetsToLNu_HT400To600",   "/WJetsToLNu_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODAPVv2-106X_mcRun2_asymptotic_preVFP_v11-v1/MINIAODSIM", 	dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
