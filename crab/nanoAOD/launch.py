@@ -54,9 +54,9 @@ else:
 #allSamples += Summer16_private + Fall17_private + Autumn18_private
 #allSamples += Run2016_17Jul2018 + Run2017_31Mar2018 + Run2018_26Sep2018 + Run2018_promptReco + Run2018_17Sep2018 + Run2018D_22Jan2019
 
-all_modules  = [ "Spring16_miniAODv2", "Summer16_Fast_miniAODv3", "Fall17_Fast_miniAODv2", "Autumn18_Fast_miniAODv1", "Summer16_miniAODv2", "Summer16_miniAODv3", "Fall17_miniAODv2", "Autumn18_miniAODv1" , "Summer20UL16_miniAOD", "Summer20UL16_miniAODAPV" , "Summer20UL17_miniAOD" , "Summer20UL18_miniAOD" ]
+all_modules  = [ "Spring16_miniAODv2", "Summer16_Fast_miniAODv3", "Fall17_Fast_miniAODv2", "Autumn18_Fast_miniAODv1", "Summer16_miniAODv2", "Summer16_miniAODv3", "Fall17_miniAODv2", "Autumn18_miniAODv1" , "Summer20UL16_miniAOD", "Summer20UL16_miniAODAPV" , "Summer20UL17_miniAOD" , "Summer20UL18_miniAOD" , "Summer20UL16_miniAODv2", "Summer20UL16_miniAODAPVv2", "Summer20UL17_miniAODv2", "Summer20UL18_miniAODv2", ]
 all_modules += [ "Run2016_17Jul2018", "Run2017_31Mar2018", "Run2018_26Sep2018", "Run2018_promptReco", "Run2018_17Sep2018", "Run2017_17Nov2017"  ]
-all_modules += [ "Summer16_private", "Fall17_private", "Autumn18_private", "Run2018D_22Jan2019","Run2016UL_miniAOD",  "Run2017UL_miniAOD", "Run2018UL_miniAOD"]
+all_modules += [ "Summer16_private", "Fall17_private", "Autumn18_private", "Run2018D_22Jan2019","Run2016UL_miniAOD",  "Run2017UL_miniAOD", "Run2018UL_miniAOD" ,"Run2016UL_miniAODv2", "Run2017UL_miniAODv2", "Run2018UL_miniAODv2"]
 
 cfgPath    = os.path.expandvars( "$CMSSW_BASE/src/Samples/cfg/" )
 allConfigs = [ x.strip( ".py" ) for x in os.listdir( cfgPath ) if x.endswith(".py") ]
@@ -204,7 +204,8 @@ for dataset in datasets:
 		#os.system("crab preparelocal crabConfig.py")
 	else:
 		print "here for MC"
-        	#os.system("crab submit --dryrun -c crabConfig.py")
+
         	os.system("crab submit -c crabConfig.py")
         	#os.system("crab preparelocal crabConfig.py")
-
+		## if want to dry run with the setup before submission
+        	#os.system("crab submit --dryrun -c crabConfig.py")

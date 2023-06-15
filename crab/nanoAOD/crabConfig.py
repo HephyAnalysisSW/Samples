@@ -42,7 +42,8 @@ else:
 config.Data.ignoreLocality = False
 config.Data.allowNonValidInputDataset = runOnNonValid
 
-if "IS_DATA" in os.environ:
+if "CRAB_IS_DATA" in os.environ:
+	print "are you here?"
 	if "2016" in Run:
 		print "2016 json: "
 		config.Data.lumiMask = '/users/priya.hussain/private/CMSSW_10_6_25/src/Samples/Tools/data/json/Cert_271036-284044_13TeV_Legacy2016_Collisions16_JSON.txt'
