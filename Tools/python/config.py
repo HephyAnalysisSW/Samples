@@ -20,8 +20,8 @@ elif os.environ['USER'] in ['priya.hussain']:
     dbDir = '/mnt/hephy/cms/priya.hussain/StopsCompressed/cache/samples/'
 elif os.environ['USER'] in ['schoef']:
     dbDir = '/afs/hephy.at/data/rschoefbeck01/nanoAOD/'
-elif os.environ['USER'] in ['robert.schoefbeck','maryam.shooshtari']:
-    dbDir = '/users/maryam.shooshtari/caches/Samples'
+elif os.environ['USER'] in ['robert.schoefbeck']:
+    dbDir = '/users/robert.schoefbeck/caches/Samples'
 elif os.environ['USER'] in ['benjamin.wilhelmy']:
     dbDir = '/users/robert.schoefbeck/caches/Samples'
 elif os.environ['USER'] in ['erich.birngruber']:
@@ -36,8 +36,8 @@ elif os.environ['USER'] in ['dennis.schwarz']:
     dbDir = '/users/dennis.schwarz/caches/Samples'
 elif os.environ['USER'] in ['cristina.giordano']:
     dbDir = '/users/cristina.giordano/caches/Samples'
-# elif os.environ['USER'] in ['maryam.shooshtari']:
-#     dbDir = '/users/maryam.shooshtari/caches/Samples'
+elif os.environ['USER'] in ['maryam.shooshtari']:
+     dbDir = '/users/maryam.shooshtari/caches/Samples'
 else:
     dbDir = '/afs/hephy.at/data/%s01/nanoAOD/'%os.environ['USER']
 
@@ -46,7 +46,7 @@ redirector_global     = 'root://cms-xrd-global.cern.ch/'
 #redirector_clip_local = '/mnt/hephy/cms/'
 #redirector_clip_local = '/scratch-cbe/users/hephy/'
 #redirector_clip       = 'root://hephyse.oeaw.ac.at:11001/'
-redirector_clip       = 'root://eos.grid.vbc.ac.at///eos/vbc/incoming/'
+redirector_clip       = 'root://eos.grid.vbc.ac.at/'
 #redirector_clip       = '/eos/vbc/incoming/'
 
 #redirector            = 'root://hephyse.oeaw.ac.at:11001/'
