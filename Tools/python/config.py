@@ -34,6 +34,8 @@ elif os.environ['USER'] in ['mzarucki']:
     dbDir = '/afs/hephy.at/data/mzarucki02/nanoAOD/caches'
 elif os.environ['USER'] in ['dennis.schwarz']:
     dbDir = '/users/dennis.schwarz/caches/Samples'
+elif os.environ['USER'] in ['cristina.giordano']:
+    dbDir = '/users/cristina.giordano/caches/Samples'
 # elif os.environ['USER'] in ['maryam.shooshtari']:
 #     dbDir = '/users/maryam.shooshtari/caches/Samples'
 else:
@@ -49,5 +51,5 @@ redirector_clip       = 'root://eos.grid.vbc.ac.at///eos/vbc/incoming/'
 
 #redirector            = 'root://hephyse.oeaw.ac.at:11001/'
 redirector            =  redirector_global
-
+print(dbDir)
 if not os.path.isdir(dbDir): os.makedirs(dbDir)
