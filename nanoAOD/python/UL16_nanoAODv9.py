@@ -48,6 +48,7 @@ logger.info("Using db file: %s", dbFile)
 
 DYJetsToLL_M10to50       = Sample.nanoAODfromDAS("DYJetsToLL_M10to50_LO",   "/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=18610)
 DYJetsToLL_M50           = Sample.nanoAODfromDAS("DYJetsToLL_M50",     "/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=2075.14*3)
+DYJetsToLL_M50_NLO       = Sample.nanoAODfromDAS("DYJetsToLL_M50_NLO", "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=2075.14*3)
 
 # x-secs using runXSecAnalyzer
 DYJetsToLL_M50_HT100to200 = Sample.nanoAODfromDAS("DYJetsToLL_M50_HT100to200","/DYJetsToLL_M-50_HT-100to200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",      dbFile=dbFile, redirector=redirector, overwrite=ov, xSection=147.4*1.23)
@@ -68,6 +69,7 @@ DYJetsToLL_M4to50_HT600toInf = Sample.nanoAODfromDAS("DYJetsToLL_M4to50_HT600toI
 DY = [
     DYJetsToLL_M10to50,
     DYJetsToLL_M50,
+    DYJetsToLL_M50_NLO,
     DYJetsToLL_M50_HT100to200,
     DYJetsToLL_M50_HT200to400,
     DYJetsToLL_M50_HT400to600,
