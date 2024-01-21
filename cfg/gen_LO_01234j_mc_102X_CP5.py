@@ -19,6 +19,8 @@ options.gridpack  = os.path.expandvars( options.gridpack )
 if not os.path.isdir(options.outputDir):
     os.makedirs(options.outputDir)
 
+
+
 # Auto generated configuration file
 # using: 
 # Revision: 1.19 
@@ -72,7 +74,7 @@ process.RECOSIMoutput = cms.OutputModule("PoolOutputModule",
         dataTier = cms.untracked.string('GEN'),
         filterName = cms.untracked.string('')
     ),
-    fileName = cms.untracked.string('GEN_LO_0j_102X.root'),
+    fileName = cms.untracked.string('GEN_LO_012j_102X.root'),
     outputCommands = process.RECOSIMEventContent.outputCommands,
     splitLevel = cms.untracked.int32(0)
 )
@@ -99,7 +101,7 @@ process.generator = cms.EDFilter("Pythia8HadronizerFilter",
             'JetMatching:etaJetMax = 5.', 
             'JetMatching:coneRadius = 1.', 
             'JetMatching:slowJetPower = 1', 
-            'JetMatching:qCut = 30.', 
+            'JetMatching:qCut = 15.', 
             'JetMatching:nQmatch = 5', 
             'JetMatching:nJetMax = 4', 
             'JetMatching:doShowerKt = off', 

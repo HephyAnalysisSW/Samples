@@ -389,7 +389,7 @@ dir="/eos/vbc/group/cms/robert.schoefbeck/gridpacks/ParticleNet/"
 #python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label PNet --unitsPerJob 10000 --totalUnits 2000000 --publish --gridpackDir ${dir} --gridpack TT01jDebug_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
 
 #/eos/vbc/group/cms/robert.schoefbeck/gridpacks/ParticleNet/TT01j1l_HT800_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
-python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label PNet_TT01j1l_HT800-ext --unitsPerJob 30000 --totalUnits 20000000 --publish --gridpackDir ${dir} --gridpack TT01j1l_HT800_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label PNet_TT01j1l_HT800-ext --unitsPerJob 30000 --totalUnits 20000000 --publish --gridpackDir ${dir} --gridpack TT01j1l_HT800_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
 #python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label PNet_TT01j1l --unitsPerJob 10000 --totalUnits 2000000 --publish --gridpackDir ${dir} --gridpack TT01j1l_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
 #python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label PNet_TT01j2l_HT800 --unitsPerJob 10000 --totalUnits 2000000 --publish --gridpackDir ${dir} --gridpack TT01j2l_HT800_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
 #python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label PNet_TT01j2l --unitsPerJob 10000 --totalUnits 2000000 --publish --gridpackDir ${dir} --gridpack TT01j2l_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
@@ -398,6 +398,48 @@ python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label PNet_
 #dir="/eos/vbc/group/cms/robert.schoefbeck/gridpacks/4top/"
 #python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label allOps-t-sch-RefPoint-noWidthRW --unitsPerJob 10000 --totalUnits 1000000 --publish --gridpackDir ${dir} --gridpack t-sch-RefPoint-noWidthRW_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
 #python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label test2 --unitsPerJob 10000 --totalUnits 2500000 --publish --gridpackDir ${dir} --gridpack  https://schoef.web.cern.ch/schoef/gridpacks/4top/TTbb01j_MS_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
-#python launch_GEN.py $@ --config gen_LO_0j_mc_102X_CP5 --production_label PNet_WhadZlepJJ --unitsPerJob 10000 --totalUnits 2500000 --publish --gridpackDir ${dir} --gridpack WhadZlepJJ_EWK_LO_SM_mjj100_pTj10_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
-#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label PNet_WZto1L1Nu_HT800 --unitsPerJob 10000 --totalUnits 2500000 --publish --gridpackDir ${dir} --gridpack WZto1L1Nu_HT800_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
 #python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label PNet_WZto1L1Nu --unitsPerJob 10000 --totalUnits 2500000 --publish --gridpackDir ${dir} --gridpack WZto1L1Nu_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
+#python launch_GEN.py $@ --config gen_LO_0j_mc_102X_CP5 --production_label WhadZlepJJ --unitsPerJob 10000 --totalUnits 3500000 --publish --gridpackDir ${dir} --gridpack WhadZlepJJ_EWK_LO_SM_mjj100_pTj10_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label WZto1L1Nu_HT800 --unitsPerJob 10000 --totalUnits 3500000 --publish --gridpackDir ${dir} --gridpack WZto1L1Nu_HT800_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
+
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label SMEFTNet_v4_DY_HT300 --unitsPerJob 10000 --totalUnits 30000000 --publish --gridpackDir ${dir} --gridpack DY_HT300_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label SMEFTNet_v4_WJets_HT300 --unitsPerJob 10000 --totalUnits 30000000 --publish --gridpackDir ${dir} --gridpack WJets_HT300_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
+
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label SMEFTNet_v4_ext_WZto2L_HT300 --unitsPerJob 10000 --totalUnits 30000000 --publish --gridpackDir ${dir} --gridpack WZto2L_HT300_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label SMEFTNet_v3_WZto1L1Nu_HT300 --unitsPerJob 10000 --totalUnits 3500000 --publish --gridpackDir ${dir} --gridpack WZto1L1Nu_HT300_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_0j_mc_102X_CP5 --production_label SMEFTNet_v4_WlepZhadJJ --unitsPerJob 10000 --totalUnits 3500000 --publish --gridpackDir ${dir} --gridpack WlepZhadJJNoRef_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
+#python launch_GEN.py $@ --config gen_LO_0j_mc_102X_CP5 --production_label SMEFTNet_v4_WhadZlepJJ --unitsPerJob 10000 --totalUnits 3500000 --publish --gridpackDir ${dir} --gridpack WhadZlepJJNoRef_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz 
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label SMEFTNet_v5_WZto2L_HT300_Ref --unitsPerJob 10000 --totalUnits 30000000 --publish --gridpackDir ${dir} --gridpack WZto2L_HT300_Ref_v5_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label SMEFTNet_v5_v2_WZto2LNoRef_HT300 --unitsPerJob 10000 --totalUnits 30000000 --publish --gridpackDir ${dir} --gridpack WZto2LNoRef_HT300_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label SMEFTNet_v7_WZto2LNoRef_HT300 --unitsPerJob 10000 --totalUnits 30000000 --publish --gridpackDir ${dir} --gridpack WZto2L_HT300_v7_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label SMEFTNet_v7_WZto2LNoRef_HT300_ext --unitsPerJob 50000 --totalUnits 200000000 --publish --gridpackDir ${dir} --gridpack WZto2L_HT300_v7_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label SMEFTNet_v7_WZto2LNoRef_HT300_ext2 --unitsPerJob 100000 --totalUnits 400000000 --publish --gridpackDir ${dir} --gridpack WZto2L_HT300_v7_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label SMEFTNet_WZto2L_HT300_HI --unitsPerJob 100000 --totalUnits 400000000 --publish --gridpackDir ${dir} --gridpack WZto2L_HT300_HI_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+
+#dir="/cvmfs/cms.cern.ch/phys_generator/gridpacks/UL/13TeV/madgraph/V5_2.6.5/ZPrimeToQQ_DMsimp_HT600/"
+#python launch_GEN.py $@ --config gen_LO_012j_mc_102X_CP5 --production_label SMEFTNet_v4_Zprime --unitsPerJob 10000 --totalUnits 30000000 --publish --gridpackDir ${dir} --gridpack ZPrimeToQQ_DMsimp_HT600_M100_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label SMEFTNet_v4_WG_HT300 --unitsPerJob 10000 --totalUnits 3500000 --publish --gridpackDir ${dir} --gridpack WG_HT300_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label TT01j1l_HT800  --unitsPerJob 10000 --totalUnits 3500000 --publish --gridpackDir ${dir} --gridpack TT01j1l_HT800_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label TT01j1l --unitsPerJob 10000 --totalUnits 3500000 --publish --gridpackDir ${dir} --gridpack TT01j1l_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label TT01j2l_HT800 --unitsPerJob 10000 --totalUnits 3500000 --publish --gridpackDir ${dir} --gridpack TT01j2l_HT800_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label TT01j2l --unitsPerJob 10000 --totalUnits 3500000 --publish --gridpackDir ${dir} --gridpack TT01j2l_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+
+#dir="/eos/vbc/group/cms/robert.schoefbeck/gridpacks/CA/"
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label TT01j2lCA_HT500_v2 --unitsPerJob 30000 --totalUnits 10000000 --publish --gridpackDir ${dir} --gridpack TT01j2lCA_HT500_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label TT01j2lCA_v2 --unitsPerJob 30000 --totalUnits 10000000 --publish --gridpackDir ${dir} --gridpack TT01j2lCA_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label TT01j1lCA_HT500_v2 --unitsPerJob 30000 --totalUnits 10000000 --publish --gridpackDir ${dir} --gridpack TT01j1lCA_HT500_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label TT01j1lCA_v2 --unitsPerJob 30000 --totalUnits 10000000 --publish --gridpackDir ${dir} --gridpack TT01j1lCA_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label TT01j1lCARef_HT800 --unitsPerJob 30000 --totalUnits 10000000 --publish --gridpackDir ${dir} --gridpack TT01j1lCARef_HT800_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label TT01j2lCARef_HT500 --unitsPerJob 30000 --totalUnits 10000000 --publish --gridpackDir ${dir} --gridpack TT01j2lCARef_HT500_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label TT01j1lCARef       --unitsPerJob 30000 --totalUnits 10000000 --publish --gridpackDir ${dir} --gridpack TT01j1lCARef_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01j_mc_102X_CP5 --production_label TT01j2lCARef       --unitsPerJob 30000 --totalUnits 10000000 --publish --gridpackDir ${dir} --gridpack TT01j2lCARef_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+
+#python launch_GEN.py $@ --config gen_LO_01234j_mc_102X_CP5 --production_label   GJets_HT-100to200 --unitsPerJob 10000 --totalUnits 3500000 --publish  --gridpack /cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/GJets/GJets_HT-100to200_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01234j_mc_102X_CP5 --production_label   GJets_HT-200to400 --unitsPerJob 50000 --totalUnits 10000000 --publish  --gridpack /cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/GJets/GJets_HT-200to400_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01234j_mc_102X_CP5 --production_label   GJets_HT-400to600 --unitsPerJob 50000 --totalUnits 10000000 --publish  --gridpack /cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/GJets/GJets_HT-400to600_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01234j_mc_102X_CP5 --production_label   GJets_HT-40to100 --unitsPerJob 10000 --totalUnits 3500000 --publish  --gridpack /cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/GJets/GJets_HT-40to100_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz
+#python launch_GEN.py $@ --config gen_LO_01234j_mc_102X_CP5 --production_label   GJets_HT-600toInf --unitsPerJob 50000 --totalUnits 10000000 --publish  --gridpack /cvmfs/cms.cern.ch/phys_generator/gridpacks/2017/13TeV/madgraph/V5_2.6.5/GJets/GJets_HT-600toInf_slc6_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz

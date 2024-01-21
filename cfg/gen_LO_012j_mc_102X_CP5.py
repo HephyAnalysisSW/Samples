@@ -74,7 +74,7 @@ process.RECOSIMoutput = cms.OutputModule("PoolOutputModule",
         dataTier = cms.untracked.string('GEN'),
         filterName = cms.untracked.string('')
     ),
-    fileName = cms.untracked.string('GEN_LO_0j_102X.root'),
+    fileName = cms.untracked.string('GEN_LO_012j_102X.root'),
     outputCommands = process.RECOSIMEventContent.outputCommands,
     splitLevel = cms.untracked.int32(0)
 )
