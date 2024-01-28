@@ -196,16 +196,16 @@ for dataset in datasets:
 	os.environ["CRAB_RUN"]    	= options.Run
         if options.dryrun:
             print "Processing %s %s" %( dataset.name, dataset.DASname )
-            print "## Dryrun, continue..."
-            continue
+            #print "## Dryrun, continue..."
+            #continue
 	if options.isData and options.Run:
-		os.system("crab submit -c crabConfig.py")
-        	#os.system("crab submit --dryrun -c crabConfig.py")
+		#os.system("crab submit -c crabConfig.py")
+        	os.system("crab submit --dryrun -c crabConfig.py")
 		#os.system("crab preparelocal crabConfig.py")
 	else:
 		print "here for MC"
 
-        	os.system("crab submit -c crabConfig.py")
+        	#os.system("crab submit -c crabConfig.py")
         	#os.system("crab preparelocal crabConfig.py")
 		## if want to dry run with the setup before submission
-        	#os.system("crab submit --dryrun -c crabConfig.py")
+        	os.system("crab submit --dryrun -c crabConfig.py")

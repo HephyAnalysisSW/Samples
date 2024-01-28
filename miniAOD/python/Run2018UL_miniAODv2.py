@@ -52,17 +52,17 @@ JetHT = [\
     JetHT_Run2018D_UL,
 ]
 
-#DoubleEG_Run2018A_UL  =   FWLiteSample.fromDAS("DoubleEG_Run2018A_UL",  "", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-#DoubleEG_Run2018B_UL  =   FWLiteSample.fromDAS("DoubleEG_Run2018B_UL",  "", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-#DoubleEG_Run2018C_UL  =   FWLiteSample.fromDAS("DoubleEG_Run2018C_UL",  "", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-#DoubleEG_Run2018D_UL  =   FWLiteSample.fromDAS("DoubleEG_Run2018D_UL",  "", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
-#
-#DoubleEG = [\
-#    DoubleEG_Run2018A_UL,
-#    DoubleEG_Run2018B_UL,
-#    DoubleEG_Run2018C_UL,
-#    DoubleEG_Run2018D_UL,
-#]
+EGamma_Run2018A_UL  =   FWLiteSample.fromDAS("EGamma_Run2018A_UL",  "/EGamma/Run2018A-UL2018_MiniAODv2-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+EGamma_Run2018B_UL  =   FWLiteSample.fromDAS("EGamma_Run2018B_UL",  "/EGamma/Run2018B-UL2018_MiniAODv2-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+EGamma_Run2018C_UL  =   FWLiteSample.fromDAS("EGamma_Run2018C_UL",  "/EGamma/Run2018C-UL2018_MiniAODv2-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+EGamma_Run2018D_UL  =   FWLiteSample.fromDAS("EGamma_Run2018D_UL",  "/EGamma/Run2018D-UL2018_MiniAODv2-v2/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
+
+EGamma = [\
+    EGamma_Run2018A_UL,
+    EGamma_Run2018B_UL,
+    EGamma_Run2018C_UL,
+    EGamma_Run2018D_UL,
+]
 
 DoubleMuon_Run2018A_UL  =   FWLiteSample.fromDAS("DoubleMuon_Run2018A_UL",  "/DoubleMuon/Run2018A-UL2018_MiniAODv2-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 DoubleMuon_Run2018B_UL  =   FWLiteSample.fromDAS("DoubleMuon_Run2018B_UL",  "/DoubleMuon/Run2018B-UL2018_MiniAODv2-v1/MINIAOD", dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
@@ -88,7 +88,7 @@ SingleMuon = [\
     SingleMuon_Run2018D_UL,
 ]
 ## add up all samples
-allSamples = MET + JetHT + DoubleMuon + SingleMuon
+allSamples = MET + JetHT + EGamma + DoubleMuon + SingleMuon
 
 for sample in allSamples:
     sample.isData = True

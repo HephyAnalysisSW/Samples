@@ -316,6 +316,7 @@ SMS_T2tt_FS_mStop_500_mLSP_470		= FWLiteSample.fromDAS("SMS_T2tt_FS_mStop_500_mL
 
 SMS_T2tt_mStop_250To1100_dM_10to30	= FWLiteSample.fromDAS("SMS_T2tt_mStop_250To1100_dM_10to30",	"/SMS-T2tt_mStop-250To1100_dM-10to30_genHT-200_genMET-100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODv2-FSUL16_106X_mcRun2_asymptotic_v17-v1/MINIAODSIM", 	dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
+SMS_T2tt_mStop_250To1100_dM_40to80	= FWLiteSample.fromDAS("SMS_T2tt_mStop_250To1100_dM_40to80",	"/SMS-T2tt_mStop-250To1100_dM-40to80_genHT-200_genMET-100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODv2-FSUL16_106X_mcRun2_asymptotic_v17-v1/MINIAODSIM", 	dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
 SMS_T2tt_4bd_mStop_250To1100_dM_10to30	= FWLiteSample.fromDAS("SMS_T2tt_4bd_mStop_250To1100_dM_10to30","/SMS-T2tt-4bd_genMET-100_genHT200_mStop-250To1100_dM-10To30_TuneCP5_LLStop_13TeV-madgraphMLM-pythia8/RunIISummer20UL16MiniAODv2-FSUL16_106X_mcRun2_asymptotic_v17-v1/MINIAODSIM", 	dbFile=dbFile, overwrite=ov, prefix=redirector_global, skipCheck=True)
 
@@ -334,6 +335,7 @@ compSUSY = [
 		SMS_T2tt_FS_mStop_500_mLSP_470,
 
 		SMS_T2tt_mStop_250To1100_dM_10to30,
+		SMS_T2tt_mStop_250To1100_dM_40to80,
 		SMS_T2tt_4bd_mStop_250To1100_dM_10to30,
 		]
 
