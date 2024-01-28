@@ -123,10 +123,10 @@
 #python launch.py $@ --config TOP_RunIISummer20UL17NanoAODv9_cfg --production_label privateUL17nanov9 --remoteDir privateUL17nanov9 --unitsPerJob 2 --publish --module Summer20UL17_miniAODv2 --sample DYJetsToLL_M4to50_HT400to600 
 #python launch.py $@ --config TOP_RunIISummer20UL17NanoAODv9_cfg --production_label privateUL17nanov9 --remoteDir privateUL17nanov9 --unitsPerJob 2 --publish --module Summer20UL17_miniAODv2 --sample DYJetsToLL_M4to50_HT600toInf 
 
-
-python launch.py $@ --config TOP_RunIISummer20UL17NanoAODv9_cfg --production_label privateUL17nanov9 --remoteDir privateUL17nanov9 --unitsPerJob 2 --publish --module Summer20UL17_miniAODv2 --sample SMS_T2tt_4bd_FS_mStop_300_mLSP_290
-python launch.py $@ --config TOP_RunIISummer20UL17NanoAODv9_cfg --production_label privateUL17nanov9 --remoteDir privateUL17nanov9 --unitsPerJob 2 --publish --module Summer20UL17_miniAODv2 --sample SMS_T2tt_4bd_FS_mStop_350_mLSP_335
-python launch.py $@ --config TOP_RunIISummer20UL17NanoAODv9_cfg --production_label privateUL17nanov9 --remoteDir privateUL17nanov9 --unitsPerJob 2 --publish --module Summer20UL17_miniAODv2 --sample SMS_T2tt_4bd_FS_mStop_400_mLSP_380
-python launch.py $@ --config TOP_RunIISummer20UL17NanoAODv9_cfg --production_label privateUL17nanov9 --remoteDir privateUL17nanov9 --unitsPerJob 2 --publish --module Summer20UL17_miniAODv2 --sample SMS_T2tt_FS_mStop_500_mLSP_420
-python launch.py $@ --config TOP_RunIISummer20UL17NanoAODv9_cfg --production_label privateUL17nanov9 --remoteDir privateUL17nanov9 --unitsPerJob 2 --publish --module Summer20UL17_miniAODv2 --sample SMS_T2tt_FS_mStop_500_mLSP_450
-python launch.py $@ --config TOP_RunIISummer20UL17NanoAODv9_cfg --production_label privateUL17nanov9 --remoteDir privateUL17nanov9 --unitsPerJob 2 --publish --module Summer20UL17_miniAODv2 --sample SMS_T2tt_FS_mStop_500_mLSP_470
+##CMSSW_10_6_29
+python launch.py $@ --config SUS-RunIISummer20UL17NanoAODv9-FS_cfg --production_label privateUL17nanov9 --remoteDir privateUL17nanov9 --unitsPerJob 2 --publish --module Summer20UL17_miniAODv2 --sample SMS_T2tt_4bd_FS_mStop_300_mLSP_290
+python launch.py $@ --config SUS-RunIISummer20UL17NanoAODv9-FS_cfg --production_label privateUL17nanov9 --remoteDir privateUL17nanov9 --unitsPerJob 2 --publish --module Summer20UL17_miniAODv2 --sample SMS_T2tt_4bd_FS_mStop_350_mLSP_335
+python launch.py $@ --config SUS-RunIISummer20UL17NanoAODv9-FS_cfg --production_label privateUL17nanov9 --remoteDir privateUL17nanov9 --unitsPerJob 2 --publish --module Summer20UL17_miniAODv2 --sample SMS_T2tt_4bd_FS_mStop_400_mLSP_380
+python launch.py $@ --config SUS-RunIISummer20UL17NanoAODv9-FS_cfg --production_label privateUL17nanov9 --remoteDir privateUL17nanov9 --unitsPerJob 2 --publish --module Summer20UL17_miniAODv2 --sample SMS_T2tt_FS_mStop_500_mLSP_420
+python launch.py $@ --config SUS-RunIISummer20UL17NanoAODv9-FS_cfg --production_label privateUL17nanov9 --remoteDir privateUL17nanov9 --unitsPerJob 2 --publish --module Summer20UL17_miniAODv2 --sample SMS_T2tt_FS_mStop_500_mLSP_450
+python launch.py $@ --config SUS-RunIISummer20UL17NanoAODv9-FS_cfg --production_label privateUL17nanov9 --remoteDir privateUL17nanov9 --unitsPerJob 2 --publish --module Summer20UL17_miniAODv2 --sample SMS_T2tt_FS_mStop_500_mLSP_470

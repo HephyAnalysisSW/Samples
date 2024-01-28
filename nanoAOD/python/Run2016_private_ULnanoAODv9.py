@@ -39,7 +39,7 @@ except:
 
 ## DB
 from Samples.Tools.config import dbDir
-dbFile = dbDir+'/DB_Run2016APV_ULnanoAODv9.sql'
+dbFile = dbDir+'/DB_Run2016_ULnanoAODv9.sql'
 logger.info("Using db file: %s", dbFile)
 
 from Samples.Tools.config import redirector as redirector

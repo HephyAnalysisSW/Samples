@@ -6,7 +6,7 @@
 #python launch.py $@ --config TOP_RunIISummer20UL16NanoAODAPVv9_cfg --production_label privateUL16nanoAPVv9 --remoteDir privateUL16nanoAPVv9 --unitsPerJob 2 --publish --module Summer20UL16_miniAODAPVv2 --sample TTLep_pow
 #python launch.py $@ --config TOP_RunIISummer20UL16NanoAODAPVv9_cfg --production_label privateUL16nanoAPVv9 --remoteDir privateUL16nanoAPVv9 --unitsPerJob 2 --publish --module Summer20UL16_miniAODAPVv2 --sample TTSingleLep_pow
 
-#python launch.py $@ --config TOP_RunIISummer20UL16NanoAODAPVv9_cfg --production_label privateUL16nanoAPVv9 --remoteDir privateUL16nanoAPVv9 --unitsPerJob 2 --publish --module Summer20UL16_miniAODAPVv2 --sample WJetsToLNu_HT70To100
+##python launch.py $@ --config TOP_RunIISummer20UL16NanoAODAPVv9_cfg --production_label privateUL16nanoAPVv9 --remoteDir privateUL16nanoAPVv9 --unitsPerJob 2 --publish --module Summer20UL16_miniAODAPVv2 --sample WJetsToLNu_HT70To100
 #python launch.py $@ --config TOP_RunIISummer20UL16NanoAODAPVv9_cfg --production_label privateUL16nanoAPVv9 --remoteDir privateUL16nanoAPVv9 --unitsPerJob 2 --publish --module Summer20UL16_miniAODAPVv2 --sample WJetsToLNu_HT100To200 
 #python launch.py $@ --config TOP_RunIISummer20UL16NanoAODAPVv9_cfg --production_label privateUL16nanoAPVv9 --remoteDir privateUL16nanoAPVv9 --unitsPerJob 2 --publish --module Summer20UL16_miniAODAPVv2 --sample WJetsToLNu_HT200To400 
 #python launch.py $@ --config TOP_RunIISummer20UL16NanoAODAPVv9_cfg --production_label privateUL16nanoAPVv9 --remoteDir privateUL16nanoAPVv9 --unitsPerJob 2 --publish --module Summer20UL16_miniAODAPVv2 --sample WJetsToLNu_HT400To600 
